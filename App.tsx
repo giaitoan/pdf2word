@@ -60,7 +60,7 @@ const App: React.FC = () => {
           <div className="flex flex-col items-end">
             <span className="text-xs text-slate-500 hidden md:block">Chuyển pdf hoặc ảnh sang word giữ công thức Toán</span>
             <span className="text-sm font-medium text-brand-600">
-              Thiết kế bởi thầy Chân Đức
+              Thiết kế bởi Giải Toán
             </span>
           </div>
         </div>
