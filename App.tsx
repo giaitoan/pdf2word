@@ -77,7 +77,7 @@ const App: React.FC = () => {
               <span className="text-brand-600">Ngay lập tức</span>
             </h2>
             <p className="text-lg text-slate-600 mb-8">
-              Ứng dụng này giúp bản chuyển file pdf hoặc ảnh bất kì thành file word, giữ nguyên công thức Toán hiển thị đẹp trên word, không cần MathType luôn. Thầy Đức quá tuyệt!
+              Ứng dụng này giúp bản chuyển file pdf hoặc ảnh bất kì thành file word, giữ nguyên công thức Toán hiển thị đẹp trên word, không cần MathType luôn.
             </p>
           </div>
         )}
