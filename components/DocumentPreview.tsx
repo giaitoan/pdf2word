@@ -17,7 +17,7 @@ const DocumentPreview: React.FC<DocumentPreviewProps> = ({ file, htmlContent, on
       <div className="flex-1 flex flex-col bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
         <div className="p-4 border-b border-slate-100 flex justify-between items-center bg-slate-50">
           <h3 className="font-semibold text-slate-700 flex items-center">
-            <Eye className="w-4 h-4 mr-2" /> Nguá»“n: {file.file.name}
+            <Eye className="w-4 h-4 mr-2" /> Nguồn: {file.file.name}
           </h3>
           <button onClick={onClear} className="text-slate-400 hover:text-red-500 transition-colors">
             <X className="w-5 h-5" />
@@ -33,8 +33,8 @@ const DocumentPreview: React.FC<DocumentPreviewProps> = ({ file, htmlContent, on
           ) : (
             <div className="flex flex-col items-center text-slate-500">
               <FileText className="w-16 h-16 mb-2 text-slate-400" />
-              <p>KhÃ´ng thá»ƒ xem trÆ°á»›c file PDF trá»±c tiáº¿p.</p>
-              <p className="text-xs">File Ä‘Ã£ táº£i xong.</p>
+              <p>Không thể xem trước file PDF trực tiếp.</p>
+              <p className="text-xs">File đã tải xong.</p>
             </div>
           )}
         </div>
@@ -44,15 +44,15 @@ const DocumentPreview: React.FC<DocumentPreviewProps> = ({ file, htmlContent, on
       <div className="flex-1 flex flex-col bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden relative">
         <div className="p-4 border-b border-slate-100 flex justify-between items-center bg-slate-50">
           <h3 className="font-semibold text-slate-700 flex items-center">
-            <FileText className="w-4 h-4 mr-2" /> Xem trÆ°á»›c káº¿t quáº£ Word
+            <FileText className="w-4 h-4 mr-2" /> Xem trước kết quả Word
           </h3>
           {htmlContent && (
             <button 
               onClick={onDownload}
               className="flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white px-3 py-1.5 rounded-lg text-sm font-medium transition-colors shadow-sm"
-              title="Táº£i vá» dáº¡ng Word (.doc) Ä‘á»ƒ giá»¯ cÃ´ng thá»©c Equation sá»­a Ä‘Æ°á»£c"
+              title="Tải về dạng Word (.doc) để giữ công thức Equation sửa được"
             >
-              <Download className="w-4 h-4" /> Táº£i vá» file Word
+              <Download className="w-4 h-4" /> Tải về file Word
             </button>
           )}
         </div>
@@ -68,7 +68,7 @@ const DocumentPreview: React.FC<DocumentPreviewProps> = ({ file, htmlContent, on
               <div className="w-12 h-2 bg-slate-200 rounded mb-4"></div>
               <div className="w-2/3 h-2 bg-slate-200 rounded mb-2"></div>
               <div className="w-1/2 h-2 bg-slate-200 rounded mb-2"></div>
-              <p className="text-sm mt-4 text-slate-400">Äang chá» chuyá»ƒn Ä‘á»•i...</p>
+              <p className="text-sm mt-4 text-slate-400">Đang chờ chuyển đổi...</p>
             </div>
           )}
         </div>
