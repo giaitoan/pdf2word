@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ["main", "master"] # Cháº¡y khi cÃ³ code má»›i Ä‘áº©y lÃªn nhÃ¡nh main hoáº·c master
+    branches: ["main", "master"] # Chạy khi có code mới đẩy lên nhánh main hoặc master
   workflow_dispatch:
 
 permissions:
@@ -32,7 +32,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          # DÃ²ng nÃ y sáº½ láº¥y API Key tá»« BÆ°á»›c 1 báº¡n Ä‘Ã£ cÃ i Ä‘á»ƒ Ä‘Æ°a vÃ o web
+          # Dòng này sẽ lấy API Key từ Bước 1 bạn đã cài để đưa vào web
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           
       - name: Upload artifact
