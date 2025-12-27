@@ -1,0 +1,5 @@
+{
+  "name": "PDFtoWordMath",
+  "description": "Chuyển đổi PDF và Ảnh sang Word giữ nguyên công thức Toán sử dụng Gemini AI.",
+  "requestFramePermissions": []
+}
