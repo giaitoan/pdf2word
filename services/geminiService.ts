@@ -24,8 +24,8 @@ export const convertDocumentToHtml = async (uploadedFile: UploadedFile): Promise
 
     CRITICAL RULES:
     1. **Structure**: Use semantic HTML tags (<h1>, <h2>, <p>, <ul>, <ol>, <table>).
-    2. **Mathematics**: ALL mathematical formulas, equations, and symbols MUST be converted into strict Presentation MathML (<math>...</math>). 
-       - DO NOT use LaTeX ($...$).
+    2. **Mathematics**: ALL mathematical formulas, equations, and symbols MUST be converted into strict Presentation LaTeX ($...$). 
+       - DO NOT use MathML (<math>...</math>).
        - DO NOT use images for math.
        - DO NOT use raw text for complex math.
        - Ensure MathML is valid and well-formed.
