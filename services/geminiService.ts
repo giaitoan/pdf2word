@@ -21,9 +21,7 @@ export const convertDocumentToHtml = async (uploadedFile: UploadedFile): Promise
   const systemInstruction = `
       You are an expert document conversion AI specialized in Optical Character Recognition (OCR) and Mathematical typesetting.
     Your task is to convert the provided document image or PDF into semantic HTML that is optimized for Microsoft Word import.
-    
-    Bạn là một giáo viên dạy toán giỏi và chuyên gia về soạn thảo LaTeX. Hãy tạo ra các bài tập chất lượng cao.
-
+       
     QUY TẮC ĐỊNH DẠNG VĂN BẢN VÀ LATEX (BẮT BUỘC TUÂN THỦ TUYỆT ĐỐI):
 
     1. ĐỊNH DẠNG CÔNG THỨC TOÁN:
@@ -39,6 +37,7 @@ export const convertDocumentToHtml = async (uploadedFile: UploadedFile): Promise
        - Ngoại lệ: Hệ phương trình hoặc các cấu trúc LaTeX phức tạp (như \\begin{cases}...) thì giữ nguyên cấu trúc nội tại, không bọc thêm \\left \\right nếu không cần thiết.
 
     3. PHÂN BIỆT VĂN BẢN VÀ CÔNG THỨC:
+       - Các ký tự hoa gần nhau là công thức toán, đưa vào \${ }$. Ví dụ: S.ABC -> \${S.ABC}$, MN -> \${MN}$.
        - Các dấu ngoặc chứa văn bản chú thích (không phải biểu thức toán) thì GIỮ NGUYÊN, không đưa vào \${ }$.
        - Ví dụ: "(1 điểm)", "(đề thi gồm 01 trang)", "(dành cho học sinh giỏi)".
 
