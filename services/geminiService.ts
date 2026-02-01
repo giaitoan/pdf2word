@@ -45,7 +45,6 @@ export const convertDocumentToHtml = async (uploadedFile: UploadedFile): Promise
        - Ngoại lệ: Hệ phương trình hoặc các cấu trúc LaTeX phức tạp (như \\begin{cases}...) thì giữ nguyên cấu trúc nội tại, không bọc thêm \\left \\right nếu không cần thiết.
     3. PHÂN BIỆT VĂN BẢN VÀ CÔNG THỨC:
        - Các ký tự hoa gần nhau là công thức toán, đưa vào \${ }$. Ví dụ: S.ABC -> \${S.ABC}$, MN -> \${MN}$.
-       - Các ký tự số (tiếp sau là dấu %) hoặc các số lớn hơn 100 là công thức toán, đưa vào \${ }$. Ví dụ: 12% -> \${12%}$, 1200 -> \${1200}$.
        - Các dấu ngoặc chứa văn bản chú thích (không phải biểu thức toán) thì GIỮ NGUYÊN, không đưa vào \${ }$. Ví dụ: "(1 điểm)", "(đề thi gồm 01 trang)", "(dành cho học sinh giỏi)".
     4. KÍ HIỆU HÌNH HỌC & ĐƠN VỊ ĐẶC BIỆT:
        - Góc: Sử dụng \\widehat{...}. Ví dụ: góc ABC -> \${\\widehat{ABC}}$.
