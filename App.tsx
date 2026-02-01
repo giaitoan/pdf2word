@@ -54,7 +54,7 @@ const App: React.FC = () => {
               <Sparkles className="w-5 h-5" />
             </div>
             <h1 className="text-xl font-bold text-slate-800 tracking-tight">
-              PDFtoWordMath
+              CONVERT MATH
             </h1>
           </div>
           <div className="flex flex-col items-end">
@@ -77,7 +77,7 @@ const App: React.FC = () => {
               <span className="text-brand-600">Ngay lập tức</span>
             </h2>
             <p className="text-lg text-slate-600 mb-8">
-              Ứng dụng này giúp bản chuyển file pdf hoặc ảnh bất kì thành file word, giữ nguyên công thức Toán hiển thị đẹp trên word, không cần MathType luôn.
+              Ứng dụng này giúp bạn chuyển file pdf hoặc ảnh bất kì thành file word, giữ nguyên công thức Toán hiển thị đẹp trên word.
             </p>
           </div>
         )}
@@ -151,14 +151,14 @@ const App: React.FC = () => {
                   <Sparkles className="w-5 h-5" />
                 </div>
                 <h3 className="font-semibold text-slate-900 mb-2">Trích xuất AI</h3>
-                <p className="text-sm text-slate-500">Gemini nhận diện cấu trúc và các phương trình toán học phức tạp.</p>
+                <p className="text-sm text-slate-500">Gemini nhận diện cấu trúc và các công thức toán học phức tạp.</p>
              </div>
              <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
                 <div className="w-10 h-10 bg-green-50 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Info className="w-5 h-5" />
                 </div>
-                <h3 className="font-semibold text-slate-900 mb-2">Chuẩn Equation</h3>
-                <p className="text-sm text-slate-500">Tải xuống dạng Word (.doc) với công thức Equation hoàn toàn có thể chỉnh sửa.</p>
+                <h3 className="font-semibold text-slate-900 mb-2">Chuẩn LaTeX</h3>
+                <p className="text-sm text-slate-500">Tải xuống dạng Word (.doc) với công thức LaTeX hoàn toàn có thể chỉnh sửa.</p>
              </div>
           </div>
         )}
