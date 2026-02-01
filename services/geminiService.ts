@@ -45,12 +45,13 @@ export const convertDocumentToHtml = async (uploadedFile: UploadedFile): Promise
        - Ngoại lệ: Hệ phương trình hoặc các cấu trúc LaTeX phức tạp (như \\begin{cases}...) thì giữ nguyên cấu trúc nội tại, không bọc thêm \\left \\right nếu không cần thiết.
     3. PHÂN BIỆT VĂN BẢN VÀ CÔNG THỨC:
        - Các ký tự hoa gần nhau là công thức toán, đưa vào \${ }$. Ví dụ: S.ABC -> \${S.ABC}$, MN -> \${MN}$.
+       - Các ký tự số (ngoại trừ sau là dấu "." hoặc ":") là công thức toán, đưa vào \${ }$. Ví dụ ĐÚNG: 12 -> \${12}$, Ví dụ SAI: 12. -> \${12}$.
        - Các dấu ngoặc chứa văn bản chú thích (không phải biểu thức toán) thì GIỮ NGUYÊN, không đưa vào \${ }$. Ví dụ: "(1 điểm)", "(đề thi gồm 01 trang)", "(dành cho học sinh giỏi)".
     4. KÍ HIỆU HÌNH HỌC & ĐƠN VỊ ĐẶC BIỆT:
        - Góc: Sử dụng \\widehat{...}. Ví dụ: góc ABC -> \${\\widehat{ABC}}$.
        - Độ: Sử dụng {}^\\circ. Ví dụ: 90 độ -> \${90{}^\\circ}$.
        - Tam giác: Từ "tam giác" hoặc kí hiệu tam giác -> đổi thành \\Delta. Ví dụ: tam giác ABC -> \${\\Delta ABC}$.
-        5. CÁC QUY TẮC KHÁC:
+    5. CÁC QUY TẮC KHÁC:
        - Dấu trừ "-": Không để khoảng trắng trước và sau dấu trừ trong công thức. Ví dụ: \${a-b}$.
        - Loại bỏ dòng thừa: Bỏ qua các dòng chứa nhiều dấu chấm liên tiếp (..............) dùng để điền khuyết.
        - Xử lý khoảng trắng: Xóa bỏ các khoảng trắng thừa liên tiếp.
